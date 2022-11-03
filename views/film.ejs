@@ -1,2 +1,21 @@
 <%- include('partials/header') %> 
 
+<main class="container film-container">
+  <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture" class="film-img">
+  <div class="film-content">
+    <h3 class="film-title"><%= anime.title %></h3>
+    <em>(titre original : <%= anime.original_title %>)</em>
+    <p class="film-description"><strong>Synopsis :</strong> <%= anime.description %></p>
+    <div class="film-footer">
+      <span>Auteur : <strong><%= anime.director %></strong> </span>
+      <span>Date de sortie : <strong><%= anime.release_date %></strong> </span>
+      <span>Durée : <strong><%= anime.duration %></strong> </span>
+    </div>
+  </div>  
+</main>
+<div class="nav-films">
+  <a href="/film/<%= anime.id-1 %>">Film précédent</a>
+  <a href="/film/<%= anime.id+1 %>">Film suivant</a>
+</div>
+
+<%- include('partials/footer') %> 

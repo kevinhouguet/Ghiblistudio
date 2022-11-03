@@ -1,26 +1,13 @@
 <%- include('partials/header') %> 
-  <nav>
+  <!-- <nav>
     <ul>
       <li><a href="/">Kanban View</a></li>
       <li><a href="/">Table View</a></li>
     </ul>
-  </nav>
-  
+  </nav> -->
+  <h3>Index</h3>
+    <p><a href="/films">Liste des films</a></p>
   <main class="container">
-    <% animes.forEach(anime => { %>
-      <article class="anime-card">
-        <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture">
-        <div class="anime-card-content">
-          <h3 class="anime-card-content-title"><%= anime.title %></h3>
-          <h4 class="anime-card-content-otitle">Titre original : <%= anime.original_title %></h4>
-          <!-- <p>Synopsis : <%= anime.description %></p> -->
-          <p class="anime-card-content-date">Date de parution : <strong><%= anime.release_date %></strong></p>
-          <p class="anime-card-content-duration">Durée : <%= anime.duration %></p>
-          <span class="anime-card-content-id hidden"><%= anime.id %></span>
-        </div>
-      </article>
-    <% }) %>
+    
   </main>
-  <script src="js/anime.js"></script>
-</body>
-</html>
+  <%- include('partials/footer') %> 

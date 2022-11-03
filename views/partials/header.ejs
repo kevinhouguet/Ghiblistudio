@@ -7,18 +7,41 @@
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" 
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <title>My app</title>
 </head>
 <body>
   <header>
-    <h1>My app</h1>
+    <h1><img id="menu-burger" src="/img/icons8-menu-arrondi-30.png" alt="menu burger"><a href="/">My app</a></h1>
+    <%- include('formSearch') %>
     <section class="filter">
       <h3 class="filter-title">Filter :</h3>
       <select name="filter" class="filter-content">
         <option value="test">original_title</option>
       </select>
-    </section>    
+    </section>
   </header>
+  <div class="main-menu scale-up-ver-top disable">
+    <form action="/login" method="post" id="login-form">
+      <fieldset>
+        <legend>Se connecter</legend>
+        <label for="loginUsername">Username :</label>
+        <input type="text" name="loginUsername" id="loginUsername">
+        <label for="loginPassword">Password :</label>
+        <input type="text" name="loginPassword" id="loginPassword">
+        <br><input type="submit" value="Send">
+      </fieldset>
+      <p>OU</p>
+      <fieldset>
+        <legend>S'enregistrer</legend>
+        <label for="registerUsername">Username :</label>
+        <input type="text" name="registerUsername" id="registerUsername">
+        <label for="registerPassword">Password :</label>
+        <input type="text" name="registerPassword" id="registerPassword">
+        <label for="registerPasswordConf">Confirmer le password :</label>
+        <input type="text" name="registerPasswordConf" id="registerPasswordConf">
+        <br><input type="submit" value="Send">
+      </fieldset>
+    </form>
+  </div>

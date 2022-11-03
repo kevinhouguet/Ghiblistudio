@@ -5,15 +5,33 @@ const mainController = {
     res.render('index', {animes});
   },
 
-  renderFilmpage: (req, res) => {
-    const idFilm = animes.find(e => e.id === Number(req.params.id));
-    res.render('film');
+  renderFilmsListpage(req,res) {
+    res.render('filmsList', {animes});
+  },
+
+  renderFilmpage: (req, res, next) => {
+    const anime = animes.find(e => e.id === Number(req.params.id));
+    if(!anime){
+      next();
+    }
+    res.render('film', {anime});
     // res.send(JSON.stringify(idFilm));
+  },
+
+  renderSearchResultpage: (req, res) => {
+    const nameRequest = req.query.name;
+    const animesFiltered = animes.filter(e => e.title.toLowerCase().includes(nameRequest));
+    res.render('searchResult', {animesFiltered});
+  },
+
+  renderLoginpage: (req,res) => {
+    const username = req.body.loginUsername;
+    res.send(`Bonjour ${username}`);
   },
 
   renderNotFoundpage: (req,res) => {
     res.status(404);
-    res.send('404 not found !!');
+    res.render('404');
   }
 };
 
