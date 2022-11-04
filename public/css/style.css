@@ -8,18 +8,21 @@ strong{
 
 body{
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(22, 25, 59);
-  background: rgb(76,76,153);
-  background: linear-gradient(180deg, rgba(76,76,153,1) 0%, rgba(22,25,59,1) 5%);
-  background-repeat: no-repeat;
+  background-color: #182963;
+
+  /* background: rgb(76,76,153);
+  background: linear-gradient(180deg, rgba(76,76,153,1) 0%, rgba(22,25,59,1) 5%); */
+  /* background-repeat: no-repeat; */
   min-height: 100vh;
-  color: white;
+  /* color: white; */
 }
 
 header {
   /* background-color: hsl(235.14, 45.68%, 15.88%); */
   color: white;
   padding: 1rem;
+  background-color: #101C42;
+
 
   display: flex;
   justify-content: space-between;
@@ -39,11 +42,7 @@ header {
   width: 100%;
   height: calc(100vh - 72px);
   z-index: 1;
-  /* border: 1px solid white; */
-  background-color: rgb(22, 25, 59);
-  background: rgba(76,76,153,1);
-  background: linear-gradient(180deg, rgba(76,76,153,1) -9%, rgba(22,25,59,1) 12%);
-  background-repeat: no-repeat;
+  background-color: #101C42;
   color: white;
 
   display: flex;
@@ -77,16 +76,18 @@ header h1 a{
 
 .filter{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  column-gap: 10px;
+  row-gap: 20px;
 
-  border: 1px solid white;
-  padding: 0 1rem;
+  color: white;
+  background-color: #101C42;
+  padding: 2em;
 }
 .filter-content{
-  display: inline-block;
-  padding: 2px 3px;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px; 
 }
 
 #form-content{

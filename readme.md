@@ -1,10 +1,8 @@
 TODO :
-choisir les couleurs du site : 
-  hsl(235.14, 45.68%, 15.88%) header
-  hsl(227.59, 45.08%, 37.84%) nav
-  hsl(218.18, 51.93%, 54.31%) 
-  hsl(218.18, 51.93%, 54.31%)
-  hsl(207.57, 82.22%, 82.35%) body
+choisir les couleurs du site :   
+  #182963 body
+  #101C42 header
+
 faire le header : OK => 
 - j'aimerais que la barre de search reste dans le header mais que le filter qui est en fait un sorter se positionne que sur la page de la liste des films
 - il faudrait des vues d'affichage qvec le filtre pour gérer l'affichage des films :

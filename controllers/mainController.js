@@ -6,7 +6,18 @@ const mainController = {
   },
 
   renderFilmsListpage(req,res) {
-    res.render('filmsList', {animes});
+    const filter = req.query.filter;
+    if(filter){
+      animes.sort((a,b) => {
+        if(typeof filter === 'string'){
+          return String(a[filter]).localeCompare(String(b[filter]));
+        } else{
+          return a[filter] - b[filter];
+        }
+      })
+      // console.log(animes);
+    }
+    res.render('filmsList', {animes, filter});
   },
 
   renderFilmpage: (req, res, next) => {

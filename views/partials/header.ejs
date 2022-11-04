@@ -9,18 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <title>My app</title>
+  <title>Ghibli Studios</title>
 </head>
 <body>
   <header>
-    <h1><img id="menu-burger" src="/img/icons8-menu-arrondi-30.png" alt="menu burger"><a href="/">My app</a></h1>
+    <h1><img id="menu-burger" src="/img/icons8-menu-arrondi-30.png" alt="menu burger"><a href="/films">Ghibli Studios</a></h1>
     <%- include('formSearch') %>
-    <section class="filter">
-      <h3 class="filter-title">Filter :</h3>
-      <select name="filter" class="filter-content">
-        <option value="test">original_title</option>
-      </select>
-    </section>
   </header>
   <div class="main-menu scale-up-ver-top disable">
     <form action="/login" method="post" id="login-form">
