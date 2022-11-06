@@ -225,8 +225,22 @@ nav ul li a:hover::after{
 
 .film-container {
   flex-wrap: nowrap;
-  border: 1px solid white;
+  align-items: flex-start;
+  /* border: 1px solid white; */
   padding: 5px;
+  position: relative;
+  height: calc(100vh - 72px);
+  width: 100%;
+  margin-top: 0;
+}
+.film-container-fond{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  z-index: -1;
 }
 .film-container strong {
   font-weight: 700;
@@ -234,6 +248,7 @@ nav ul li a:hover::after{
 }
 .film-container p {
   line-height: 1.8rem;
+  text-align: justify;
 }
 
 .film-content {
@@ -251,6 +266,7 @@ nav ul li a:hover::after{
   font-size: 4rem;
   font-weight: 700;
   font-family: 'Alice', serif;
+  margin-bottom: 10px;
 }
 .film-description {
   margin: 1em 0;
@@ -259,16 +275,43 @@ nav ul li a:hover::after{
 
 .film-img {
   width: 300px;
+  border: 1px solid white;
 }
 .film-footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  column-gap: 20px;
 }
 
-.nav-films {
+/* .nav-films {
   display: flex;
   justify-content: space-between;
+
+  position: fixed;
+  top: 50vh;
+  left: 0;
+} */
+
+.nav-prec, .nav-suiv  {
+  position: fixed;
+  top: 50vh;
+  background-color: rgba(0,0,0,30%);
 }
+.nav-prec{
+  left: 0;
+  background-image: url("../img/fleche-gauche.png");
+  width: 50px;
+  height: 50px;
+}
+.nav-suiv {
+  right: 0;
+  background-image: url("../img/fleche-droite.png");
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Autres */
 
 .not-found{
   flex-direction: column;

@@ -1,6 +1,7 @@
 <%- include('partials/header') %> 
 
 <main class="container film-container">
+  <img src="<%= anime.banner_src %>" alt="banniere" class="film-container-fond">
   <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture" class="film-img">
   <div class="film-content">
     <h3 class="film-title"><%= anime.title %></h3>
@@ -13,9 +14,11 @@
     </div>
   </div>  
 </main>
-<div class="nav-films">
+<!-- <div class="nav-films">
   <a href="/film/<%= anime.id-1 %>">Film précédent</a>
   <a href="/film/<%= anime.id+1 %>">Film suivant</a>
-</div>
+</div> -->
+<a class="nav-prec" href="/film/<%= anime.id-1 %>"></a>
+<a class="nav-suiv" href="/film/<%= anime.id+1 %>"></a>
 
 <%- include('partials/footer') %> 

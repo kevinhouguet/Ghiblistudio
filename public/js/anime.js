@@ -5,6 +5,6 @@ animeCardElem.forEach(card => {
     const idFilm = event.currentTarget
       .querySelector(".anime-card-content-id")
       .textContent;
-    window.location.pathname = `/film/${idFilm}`;
+    window.location.href = `/film/${idFilm}`;
   });
 });
