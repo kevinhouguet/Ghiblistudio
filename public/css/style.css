@@ -99,7 +99,27 @@ header h1 a{
   border: 1px solid white;
 }
 
-.search-form{
+#search-form {
+  display:flex;
+}
+
+#search-name {
+  padding:10px;
+  width:300px;
+  border:1px solid white;  
+  border-right:none;
+}
+
+#search-form-submit{
+  all:unset;
+  cursor:pointer;
+  padding: 10px;
+  line-height:15px;
+  font-family:sans-serif;
+  border:1px solid white;  
+  background: url("https://icones8.fr/icon/132/chercher") #fff
+    no-repeat cover;
+  color:white;
 }
 
 nav{
