@@ -10,10 +10,10 @@ faire le header : OK =>
   - en table
   - en full description
 faire la navbar : OK
-peupler le tri : NOK
+peupler le tri : OK
 
 faire les routes :
-un anime au clique sur un anime depuis la liste des films
+un anime au clique sur un anime depuis la liste des films : OK
 
 faire le js pour gerer les differentes vues de l index : NOK (feature a revoir)
 

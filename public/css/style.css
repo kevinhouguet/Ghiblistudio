@@ -150,11 +150,14 @@ nav ul li a:hover::after{
 /* Liste des Films */
 
 .anime-card{
-  border: 1px solid rgba(255, 255, 255, 10%);
+  /* border: 1px solid rgba(255, 255, 255, 10%); */
   width: 200px;
   color: white;
 
   transition: transform 300ms ease;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .anime-card:hover{
@@ -164,23 +167,22 @@ nav ul li a:hover::after{
 
 .anime-card img{
   width: 100%;
-  margin-bottom: 0.3rem;
 }
 
 .anime-card-content{
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  justify-content: center;
+  background-color: #101C42;
+  padding: 0.5em;
 }
 
 .anime-card-content-title{
   font-size: 1.3rem;
+  text-align: center;
 }
 
-.anime-card-content-otitle{
-  font-size: 0.8rem;
-  font-style: italic;
-}
 
 /* Page de film unique */
 
