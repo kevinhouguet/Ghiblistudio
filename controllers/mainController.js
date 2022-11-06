@@ -15,7 +15,6 @@ const mainController = {
           return a[filter] - b[filter];
         }
       })
-      // console.log(animes);
     }
     res.render('filmsList', {animes, filter});
   },

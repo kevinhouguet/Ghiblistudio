@@ -3,7 +3,8 @@
   <h3 class="filter-title">Trier par :</h3>
   <ul class="filter-content">
     <% for (const property in animes[0]){ %>
-      <li><a href="?filter=<%= property %>"><%= property.split("_")
+      <li><a <% if(filter === property){ %> class="active" <%  } %> 
+      href="?filter=<%= property %>"><%= property.split("_")
         .map(e => e.charAt(0).toUpperCase() + e.slice(1))
         .join(' ') %></a></li>      
     <% } %>

@@ -102,6 +102,11 @@ header h1 a{
   color: #101C42;
 }
 
+.filter-content .active {
+  background-color: #fff;
+  color: #101C42;
+}
+
 #form-content{
   display: flex;
   flex-direction: column;
