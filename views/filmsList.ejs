@@ -1,15 +1,20 @@
 <%- include('partials/header') %>
-<div class="filter">
+<section class="filter">
   <h3 class="filter-title">Trier par :</h3>
-  <ul class="filter-content">
+  <div class="filter-content">
     <% for (const property in animes[0]){ %>
-      <li><a <% if(filter === property){ %> class="active" <%  } %> 
-      href="?filter=<%= property %>"><%= property.split("_")
-        .map(e => e.charAt(0).toUpperCase() + e.slice(1))
-        .join(' ') %></a></li>      
+      <a <% if(filter === property){ %> 
+        class="active" 
+        <%  } %> 
+        href="?filter=<%= property %>">
+          <%= property
+            .split("_")
+            .map(e => e.charAt(0).toUpperCase() + e.slice(1))
+            .join(' ') %>
+      </a>
     <% } %>
-  </ul>
-</div>
+      </div>
+</section>
   <main class="container">
     <% animes.forEach(anime => { %>
       <article class="anime-card">
