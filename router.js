@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const mainController = require('./controllers/mainController');
+const middlewares = require('./middlewares');
 
 router.get("/", mainController.renderHomepage);
 
-router.get("/films", mainController.renderFilmsListpage);
+router.get("/films",mainController.renderFilmsListpage);
 
 router.get("/film/:id", mainController.renderFilmpage);
 

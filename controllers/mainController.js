@@ -1,4 +1,6 @@
-const animes = require("../data/animes.json");
+const { animesJSONFormat } = require("../middlewares");
+const animes = animesJSONFormat();
+// console.log(animes)
 
 const mainController = {
   renderHomepage: (req,res) => {
@@ -7,26 +9,22 @@ const mainController = {
 
   renderFilmsListpage(req,res) {
     const filter = req.query.filter;
+    const filterProperty = {
+      "titre": "title",
+      "date": "release_date",
+      "duree": "duration"
+    }
     if(filter){
       animes.sort((a,b) => {
-        if(typeof filter === 'string'){
-          return String(a[filter]).localeCompare(String(b[filter]));
+        if(typeof a[filterProperty[filter]] === 'string'){
+          return String(a[filterProperty[filter]]).localeCompare(String(b[filterProperty[filter]]));
         } else{
-          return a[filter] - b[filter];
+          return a[filterProperty[filter]] - b[filterProperty[filter]];
         }
       })
     }
-    animes.map(anime => {
-      if(anime.duration % 60 === 0){
-        anime.duration = anime.duration / 60 + 'h';
-      } else {
-        const heures = Math.floor(anime.duration / 60) + 'h';
-        const minutes = (anime.duration % 60) < 10 ? '0' + anime.duration % 60 : anime.duration % 60;
-        anime.duration = heures + minutes;
-      }
-    });
     // console.log(animes[0])
-    res.render('filmsList', {animes, filter});
+    res.render('filmsList', {animes, filter, filterProperty});
   },
 
   renderFilmpage: (req, res, next) => {
