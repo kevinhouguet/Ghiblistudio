@@ -1,15 +1,16 @@
 <%- include('partials/header') %> 
 
-<main class="container film-container">
-  <img src="<%= anime.banner_src %>" alt="banniere" class="film-container-fond">
-  <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture" class="film-img">
+<main class="container film-container" style="background: url(<%= anime.banner_src %>) no-repeat center/cover">
+  <!-- <img src="<%= anime.banner_src %>" alt="banniere" class="film-container-fond"> -->
+  <!-- <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture" class="film-img"> -->
   <div class="film-content">
-    <h3 class="film-title"><%= anime.title %></h3>
-    <em>(titre original : <%= anime.original_title %>)</em>
+    <div>
+      <h3 class="film-title"><%= anime.title %> (<%= anime.release_date %>)</h3>
+      <em>(titre original : <%= anime.original_title %>)</em>
+    </div>
     <p class="film-description"><strong>Synopsis :</strong> <%= anime.description %></p>
     <div class="film-footer">
       <span>Auteur : <strong><%= anime.director %></strong> </span>
-      <span>Date de sortie : <strong><%= anime.release_date %></strong> </span>
       <span>Durée : <strong><%= anime.duration %></strong> </span>
     </div>
   </div>  
