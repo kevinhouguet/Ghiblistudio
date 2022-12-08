@@ -27,13 +27,6 @@ header {
   position: relative;
 }
 
-#menu-burger {
-  display: inline-block;
-  width: 25px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
 .main-menu{
   position: absolute;
   width: 100%;
@@ -46,16 +39,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-#login-form {
-  border: 1px solid white;
-}
-
-#login-form legend {
-  background-color: #000;
-  color: #fff;
-  padding: 3px 6px;
 }
 
 .disable{
@@ -146,38 +129,7 @@ header h1 a{
   color:white;
 }
 
-nav{
-  /* background-color: hsl(207.57, 82.22%, 82.35%); */
-  padding: 0.5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 10%);
-  margin: 0 2em;
-}
-nav ul{
-  display: flex;
-  justify-content: center;
-  column-gap: 2rem;
-}
-nav ul li a{
-  text-decoration: none;
-  /* color: #e61600; */
-  color: white;
-  font-weight: 700;
-}
-
-nav ul li a:hover{
-  color: hsl(207.57, 82.22%, 82.35%);
-}
-nav ul li a::after{
-  display: block;
-  content: ' ';
-  background-color: hsl(207.57, 82.22%, 82.35%);
-  width: 0;
-  height: 1px;
-  transition: all 300ms ease;
-}
-nav ul li a:hover::after{
-  width: 100%;
-}
+/* Liste des Films */
 
 .container{
   display: flex;
@@ -185,16 +137,14 @@ nav ul li a:hover::after{
   row-gap: 10px;
   column-gap: 10px;
 
-  width: 80%;
-  margin: 1em auto;
+  margin: 1em 1em;
 
   color: white;
 }
 
-/* Liste des Films */
+
 
 .anime-card{
-  /* border: 1px solid rgba(255, 255, 255, 10%); */
   width: 200px;
   color: white;
 
@@ -202,6 +152,7 @@ nav ul li a:hover::after{
 
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .anime-card:hover{
@@ -222,9 +173,21 @@ nav ul li a:hover::after{
   padding: 0.5em;
 }
 
-.anime-card-content-title{
+.anime-card-content-title {
   font-size: 1.3rem;
   text-align: center;
+}
+
+.anime-card-content-subtitle {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.anime-card-content-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 

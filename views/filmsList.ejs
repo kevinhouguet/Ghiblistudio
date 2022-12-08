@@ -20,7 +20,13 @@
       <article class="anime-card">
         <img src="<%= anime.image_src %>" alt="<%= anime.title %> picture">
         <div class="anime-card-content">
-          <h3 class="anime-card-content-title"><%= anime.title %></h3>
+          <h2 class="anime-card-content-title"><%= anime.title %></h2>
+          <h3 class="anime-card-content-subtitle"><%= anime.original_title %></h3>
+          <div class="anime-card-content-footer">
+            <div class="anime-card-content-durationTime">Durée : <%= anime.duration %></div>
+            <div class="anime-card-content-releaseDate">Sortie en <%= anime.release_date %></div>
+          </div>
+
           <span class="anime-card-content-id disable"><%= anime.id %></span>
         </div>
       </article>
